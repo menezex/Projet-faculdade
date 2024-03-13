@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link do CSS -->
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/modalCliente.css" />
+    <link rel="stylesheet" href="./assets/css//buttons.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
+    <!-- Link do JS -->
+    <script src="./assets/js/index.js" defer type="module"></script>
+    <title>Process J.</title>
+  </head>
+  <body>
+    <header class="headerPrincipal">
+      <img class="logo" src="./assets/img/logo.svg" alt="logo" />
+      <h1>PROCESS J.</h1>
+    </header>
+    <main>
+      <button id="btnNovoCliente">Novo cliente</button>
+      <input
+        type="text"
+        id="pesquisarCliente"
+        placeholder="Pesquisar cliente"
+      />
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <header class="modal-header">
+            <h2>Novo Cliente</h2>
+            <span class="modal-close" id="modalClose">&#10006;</span>
+          </header>
+          <form id="form" class="modal-form">
+            <input
+              type="text"
+              id="nomeCliente"
+              placeholder="Nome e Sobrenome"
+              required
+            />
+            <input type="number" id="cpf" placeholder="CPF" required />
+            <input type="number" id="cep" placeholder="CEP" required />
+            <input type="text" id="rua" placeholder="Nome da rua" required />
+            <input
+              type="text"
+              id="numeroEndereco"
+              placeholder="N°"
+              minlength="1"
+              maxlength="4"
+              required
+            />
+            <input type="text" id="bairro" placeholder="Bairro" required />
+            <input
+              type="tel"
+              id="telefone"
+              placeholder="Telefone: (xx)99999-9999"
+              required
+            />
+          </form>
+          <footer class="modal-footer">
+            <button id="salvarCliente">Salvar</button>
+            <button id="cancelarCliente">Cancelar</button>
+          </footer>
+        </div>
+      </div>
+      <div id="listaCliente"></div>
+    </main>
+  </body>
+</html>
